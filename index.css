@@ -29,10 +29,10 @@
   cursor: pointer;
 }
 
-.search {
+/* .search {
   margin: 10px 0;
   padding: 10px 0;
-}
+} */
 
 .res-container {
   display: flex;
@@ -52,4 +52,9 @@
 
 .res-logo {
   max-width: 100%;
+}
+
+.filter-btn {
+  margin: 10px;
+  cursor: pointer;
 }
