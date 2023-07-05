@@ -3,3 +3,5 @@ export const LOGO_URL =
 
 export const CLOUDINARY_BASE_URL =
   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+
+export const GITHUB_FETCH_SINGLE_USER_API = "https://api.github.com/users/";

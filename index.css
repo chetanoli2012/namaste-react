@@ -83,3 +83,15 @@
   border: none;
   font-size: 20px;
 }
+
+.user-card {
+  padding: 10px 20px;
+  border: 1px solid #f0f0f0;
+  max-width: fit-content;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.user-avatar-url {
+  height: 100px;
+  border-radius: 50%;
+}
