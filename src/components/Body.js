@@ -29,24 +29,34 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="flex justify-between items-center">
+        <div className="m-2 p-2">
           <input
             type="text"
-            className="search-box"
+            className="p-2 rounded-xl border border-solid border-gray-300"
             placeholder="Search by name or cuisine..."
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
             value={searchText}
           />
-          <button onClick={handleSearch}>Search</button>
+          <button
+            className="ml-4 px-4 py-2 bg-gray-200 rounded-xl hover:cursor-pointer"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
         </div>
-        <button className="filter-btn" onClick={getTopRatedRestaurants}>
-          Top Rated Restarants
-        </button>
+        <div className="m-2 p-2">
+          <button
+            className="m-8 px-4 py-2 bg-gray-200 rounded-xl hover:cursor-pointer"
+            onClick={getTopRatedRestaurants}
+          >
+            Top Rated Restarants
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredRestaurants?.map(function (res) {
           return (
             <Link key={res.data.uuid} to={`/restaurant/${res.data.id}`}>
