@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
@@ -8,6 +8,12 @@ import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Error from "./components/Error";
+import { lazy } from "react";
+import Shimmer from "./components/Shimmer";
+
+// lazy import grocery
+
+const Grocery = lazy(() => import("./components/Grocery"));
 
 // React's core method of creating elements
 // const heading = React.createElement(
@@ -47,6 +53,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactUs />,
+      },
+      {
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<Shimmer />}>
+            <Grocery />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurant/:resId",
