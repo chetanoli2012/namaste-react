@@ -1,7 +1,14 @@
 import { CLOUDINARY_BASE_URL } from "../utils/constants";
 
 const RestaurantCard = ({
-  data: { name, cloudinaryImageId, cuisines, avgRating, costForTwo, slaString },
+  resData: {
+    name,
+    cloudinaryImageId,
+    cuisines,
+    avgRating,
+    costForTwo,
+    slaString,
+  },
 }) => {
   return (
     <div className="m-4 p-4 w-[310px] rounded-xl shadow-xl bg-gray-200 hover:border border-solid border-gray-200">

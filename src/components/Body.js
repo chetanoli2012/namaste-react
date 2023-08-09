@@ -59,8 +59,8 @@ const Body = () => {
       <div className="flex flex-wrap">
         {filteredRestaurants?.map(function (res) {
           return (
-            <Link key={res.data.uuid} to={`/restaurant/${res.data.id}`}>
-              <RestaurantCard {...res} />{" "}
+            <Link key={res?.info.id} to={`/restaurant/${res?.info.id}`}>
+              <RestaurantCard resData={res?.info} />{" "}
             </Link>
           );
         })}
